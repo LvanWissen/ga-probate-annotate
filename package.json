@@ -1,6 +1,7 @@
 {
   "name": "probate-annotate",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@recogito/recogito-js": "^1.5.3",
