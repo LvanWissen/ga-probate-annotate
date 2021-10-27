@@ -1,0 +1,41 @@
+.App {
+  margin: 20px;
+}
+
+.downloadbutton a,
+.downloadbutton a:visited,
+.downloadbutton a:hover,
+.downloadbutton a:active {
+  color: inherit;
+}
+
+.code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+.tag-material {
+  background-color: rgb(165, 213, 216, .2) !important;
+  border-bottom: 2px solid rgb(165, 213, 216) !important;
+}
+
+.tag-person {
+  background-color: rgb(0, 66, 157, .2) !important;
+  border-bottom: 2px solid rgb(0, 66, 157) !important;
+}
+
+.tag-object {
+  background-color: rgba(147, 0, 58, .2) !important;
+  border-bottom: 2px solid rgb(147, 0, 58) !important;
+}
+
+/* COLORS=[ "#00429d",
+"#4771b2",
+"#73a2c6",
+"#a5d5d8",
+"#ffffe0",
+"#ffbcaf",
+"#f4777f",
+"#cf3759",
+"#93003a",
+]; */
