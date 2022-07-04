@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react";
 
-// Annotation package
+// Annotation package - IMPORTANT: import from src!
 import { Recogito } from "@recogito/recogito-js/src";
+import GeotaggingWidget from "@recogito/geotagging-widget/src";
 
 import "@recogito/recogito-js/dist/recogito.min.css";
 
@@ -145,11 +146,17 @@ class Document extends Component<DocumentProps> {
       this.props.setAnnotations(r.getAnnotations());
     };
 
+    // Geotagging widget config
+    const config = {
+      // TODO...
+    }
+
     const r = new Recogito({
       content: this.htmlId,
       locale: "auto",
       mode: "pre",
       widgets: [
+        { widget: GeotaggingWidget(config) },
         { widget: "COMMENT" },
         {
           widget: "TAG",
