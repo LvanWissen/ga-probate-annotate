@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react";
 
 // Annotation package
-import { Recogito } from "@recogito/recogito-js";
+import { Recogito } from "@recogito/recogito-js/src";
+
 import "@recogito/recogito-js/dist/recogito.min.css";
 
 // Theming only
