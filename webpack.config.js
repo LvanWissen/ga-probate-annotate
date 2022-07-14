@@ -10,7 +10,8 @@ const resolveAppPath = relativePath => path.resolve(APP_DIR, relativePath);
 module.exports = {
   entry: resolveAppPath('src'),
   output: {
-    filename: 'app.js'
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'build'),
   },
   performance: {
     hints: false
