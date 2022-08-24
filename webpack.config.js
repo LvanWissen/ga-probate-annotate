@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const APP_DIR = fs.realpathSync(process.cwd());
 
@@ -29,9 +30,9 @@ module.exports = {
   },
   module: {
     rules: [
-      { 
-        test: /\.(js|jsx)$/, 
-        use: { 
+      {
+        test: /\.(js|jsx)$/,
+        use: {
           loader: 'babel-loader' ,
           options: {
             "presets": [
@@ -93,6 +94,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin ({
       template: resolveAppPath('public/index.html')
-    })
+    }), 
+    new CopyWebpackPlugin({
+            patterns: [
+                { from: 'static' }
+            ]
+        })
   ]
 }
